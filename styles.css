@@ -1,10 +1,23 @@
 body {
-    margin: 3em;
+    margin: 2em;
 }
 
 #grid {
-    display: grid;
-    grid-template-columns: repeat(16, 50px);
-    grid-template-rows: repeat(16, 50px);
-    justify-content: center;
+    /* height: 800px; */
+    width: 800px;
+    margin: auto;
+}
+
+#grid > div {
+    display: flex;
+    flex: 1;
+    height: 50px;
+}
+
+[class^="column"] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 50px;
+    border: 1px solid rgb(192, 192, 192);
 }

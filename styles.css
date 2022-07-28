@@ -23,5 +23,20 @@ body {
 }
 
 .hovered {
-    background-color: pink;
+    background-color: rgb(255, 190, 201);
+    /* transition: background-color 500ms linear; */
+    animation-duration: 1s;
+    animation-name: fade;
+    animation-fill-mode: both;
+}
+
+.hovered:hover {
+    background-color: rgb(250, 142, 250);
+    /* transition: background-color 1000ms linear; */
+}
+
+@keyframes fade {
+    0% { filter: brightness(0.7); }
+    50% { filter: brightness(0.85); }
+    100% { filter: brightness(1); }
 }

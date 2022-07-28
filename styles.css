@@ -1,42 +1,53 @@
-body {
+html {
     margin: 2em;
 }
 
-#grid {
-    /* height: 800px; */
-    width: 800px;
+.content {
+    display: flex;
     margin: auto;
+    width: 1000px;
 }
 
-#grid > div {
+button {
+    font-size: 16px;
+    padding: 10px;
+    width: 140px;
+    margin-right: 20px;
+}
+
+#grid {
+    height: 800px;
+    width: 800px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#grid > * {
     display: flex;
     flex: 1;
-    height: 50px;
 }
 
 .column {
     display: flex;
     flex-direction: column;
     flex: 1;
-    width: 50px;
-    border: 1px solid rgb(240, 240, 240);
 }
 
 .hovered {
-    background-color: rgb(255, 190, 201);
-    /* transition: background-color 500ms linear; */
+    background-color: rgb(255, 159, 175);
     animation-duration: 1s;
     animation-name: fade;
     animation-fill-mode: both;
 }
 
 .hovered:hover {
-    background-color: rgb(250, 142, 250);
-    /* transition: background-color 1000ms linear; */
+    opacity: 0.5;
 }
 
 @keyframes fade {
     0% { filter: brightness(0.7); }
-    50% { filter: brightness(0.85); }
+    33% { filter: brightness(0.85); }
     100% { filter: brightness(1); }
 }

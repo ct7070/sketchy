@@ -4,8 +4,8 @@ html {
 
 .content {
     display: flex;
-    margin: auto;
-    width: 1000px;
+    /* margin: auto; */
+    width: 1150px;
 }
 
 button {
@@ -13,6 +13,20 @@ button {
     padding: 10px;
     width: 140px;
     margin-right: 20px;
+}
+
+.showSize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    font-size: 24px;
+    text-align: center;
+    margin-left: 20px;
+    width: 140px;
+    height: 40px;
+    border: 1px solid gray;
+    background-color: antiquewhite;
 }
 
 #grid {
@@ -33,21 +47,31 @@ button {
     display: flex;
     flex-direction: column;
     flex: 1;
-}
-
-.hovered {
-    background-color: rgb(255, 159, 175);
-    animation-duration: 1s;
-    animation-name: fade;
-    animation-fill-mode: both;
+    border-radius: 50% 20% / 10% 30%;
 }
 
 .hovered:hover {
-    opacity: 0.5;
+    animation-name: randomColor;
+    background-image: linear-gradient(92deg,#ebaf9d,#75dd9d);
+    background-clip: text;
+    animation: randomColor 100ms linear;
 }
 
-@keyframes fade {
-    0% { filter: brightness(0.7); }
-    33% { filter: brightness(0.85); }
-    100% { filter: brightness(1); }
+@keyframes randomColor {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(180deg); }
+}
+
+.s1 { filter: brightness(90%); }
+.s2 { filter: brightness(80%); }
+.s3 { filter: brightness(70%); }
+.s4 { filter: brightness(60%); }
+.s5 { filter: brightness(50%); }
+.s6 { filter: brightness(40%); }
+.s7 { filter: brightness(30%); }
+.s8 { filter: brightness(20%); }
+.s9 { filter: brightness(10%); }
+
+.blackout {
+    background-color: 'black';
 }

@@ -50,6 +50,11 @@ button {
     border-radius: 50% 20% / 10% 30%;
 }
 
+.blackout {
+    background-color: 'black';
+    filter: brightness(0%);
+}
+
 .hovered:hover {
     animation-name: randomColor;
     background-image: linear-gradient(92deg,#ebaf9d,#75dd9d);
@@ -72,6 +77,3 @@ button {
 .s8 { filter: brightness(20%); }
 .s9 { filter: brightness(10%); }
 
-.blackout {
-    background-color: 'black';
-}

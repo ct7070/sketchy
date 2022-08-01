@@ -54,8 +54,9 @@ function buildGrid(gridSize){
                 col.style.backgroundColor = `hsl(${h}, 50%, 80%)`;
                 break;
             } else if (col.classList.contains('hovered') && 
-                        (col.classList.contains('s10'))){
+                        (col.classList.contains('s9'))){
                         col.classList.add('blackout');
+		    	col.style.backgroundColor = 'black';
                         break;
             } else if (col.classList.contains('hovered') && 
                         (!col.classList.contains(`s${i}`))){
